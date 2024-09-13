@@ -1,0 +1,24 @@
+
+
+Vevők:
+■   Vevő_ID INT,
+    Vevő_Név VARCHAR(255),
+    Vevő_Cím VARCHAR(255),
+
+Termékek:
+    Termék_ID INT,
+    Termék_Név VARCHAR(255),
+    Kategória VARCHAR(255),
+    Egységár INT,
+
+Megj. Listaár INT, (a valós életben ez kellene!)
+
+Eladások:
+    Rendelés_ID INT,
+    Vevő_ID
+    Termék_ID
+    Mennyiség INT,
+    Rendelés_Dátuma DATE
+
+
+Megj. Eladásiár INT, (a valós életben ez kellene!)
