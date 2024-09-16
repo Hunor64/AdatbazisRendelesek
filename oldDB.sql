@@ -41,10 +41,3 @@ INSERT INTO Rendelések (Rendelés_ID, Vevő_Név, Vevő_Cím, Termék_ID, Term�
 (16, 'Horváth Zoltán', 'Miskolc, Széchenyi u. 12', 128, 'Hajvasaló', 'Háztartás', 4000, 1, '2023-10-20'),
 (17, 'Nagy Éva', 'Debrecen, Kossuth u. 6', 129, 'Laptop', 'Elektronika', 200000, 1, '2023-10-22'),
 (17, 'Nagy Éva', 'Debrecen, Kossuth u. 6', 130, 'Egér', 'Elektronika', 5000, 2, '2023-10-22');
-
-
-duplikaltsag, eszkoz id, lakcim egyezes
-
-rendelesid datum mennyiseg ar
-vevo cim 
-termek

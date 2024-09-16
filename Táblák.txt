@@ -1,7 +1,7 @@
 
 
 Vevők:
-■   Vevő_ID INT,
+    Vevő_ID INT,
     Vevő_Név VARCHAR(255),
     Vevő_Cím VARCHAR(255),
 

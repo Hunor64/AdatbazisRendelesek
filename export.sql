@@ -4,10 +4,7 @@ SELECT DISTINCT Vevő_Név,Vevő_Cím FROM rendelések;
 
 
 INSERT INTO termékek (Termék_ID,Termék_Név,Kategória,Egységár) 
-SELECT Termék_ID,Termék_Név,Kategória,Egységár FROM rendelések;
-
-
-
+SELECT DISTINCT Termék_ID,Termék_Név,Kategória,Egységár FROM rendelések;
 
 
 INSERT INTO eladások (Rendelés_ID, Termék_ID, Mennyiség, Rendelés_Dátuma, Vevő_Id)

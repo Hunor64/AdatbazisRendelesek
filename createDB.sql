@@ -5,7 +5,7 @@ CREATE TABLE Vevők (
 );
 
 CREATE TABLE Termékek (
-    Termék_ID INT,
+    Termék_ID INT PRIMARY KEY,
     Termék_Név VARCHAR(255),
     Kategória VARCHAR(255),
     Egységár INT
@@ -14,7 +14,9 @@ CREATE TABLE Termékek (
 CREATE TABLE Eladások (
     Rendelés_ID INT,
     Vevő_Id INT,
-    Termék_ID INT,
+    Termék_Id INT,
+    FOREIGN KEY (Vevő_Id) REFERENCES Vevők(Vevő_Id),
+    FOREIGN KEY (Termék_Id) REFERENCES Termékek(Termék_ID),
     Mennyiség INT,
     Rendelés_Dátuma DATE
 );
