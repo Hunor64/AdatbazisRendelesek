@@ -1,0 +1,33 @@
+CREATE TABLE vevők (
+    Vevő_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Vevő_Név VARCHAR(255),
+    Vevő_Cím VARCHAR(255)
+);
+
+INSERT INTO vevők (Vevő_Név, Vevő_Cím)
+SELECT DISTINCT Vevő_Név, Vevő_Cím
+FROM rendelések
+
+
+CREATE TABLE termékek (
+    Termék_ID INT PRIMARY KEY,
+    Termék_Név VARCHAR(255),
+    Kategória VARCHAR(255),
+    Egységár INT
+);
+
+INSERT INTO termékek (Termék_ID, Termék_Név, Kategória, Egységár)
+SELECT DISTINCT Termék_ID, Termék_Név, Kategória, Egységár
+FROM rendelések
+
+
+CREATE TABLE eladások (
+    Rendelés_ID INT,
+    Vevő_ID INT,
+    Termék_ID INT,
+    Mennyiség INT,
+    Rendelés_Dátuma DATE,
+    FOREIGN KEY (Vevő_ID) REFERENCES vevők(Vevő_ID),
+    FOREIGN KEY (Termék_ID) REFERENCES termékek(Termék_ID)
+);
+
